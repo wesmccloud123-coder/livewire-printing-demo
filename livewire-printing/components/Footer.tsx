@@ -33,7 +33,7 @@ export function Footer() {
           <div className="font-semibold text-zinc-900">Contact</div>
           <div className="mt-4 space-y-2">
             <div>(606) 407-2381</div>
-            <div>info@livewireprinting.com</div>
+            <div>team@livewireprints.com</div>
             <div>Maysville, Kentucky</div>
           </div>
         </div>
