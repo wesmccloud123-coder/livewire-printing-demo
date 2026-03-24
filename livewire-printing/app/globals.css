@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #ffffff;
+  --bg-soft: #fafafa;
+  --card: rgba(255,255,255,0.84);
+  --muted: #52525b;
+  --line: rgba(24,24,27,0.08);
+  --brand: #dc2626;
+  --brand-dark: #991b1b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+}
+
+.container-shell {
+  @apply mx-auto w-full max-w-7xl px-6 lg:px-8;
+}
+
+.section-space {
+  @apply py-20 lg:py-24;
+}
+
+.card-surface {
+  @apply rounded-[2rem] border border-black/5 bg-white/85 shadow-[0_20px_60px_rgba(0,0,0,0.07)] backdrop-blur;
+}
+
+.eyebrow {
+  @apply text-sm font-semibold uppercase tracking-[0.3em] text-red-500;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.soft-grid {
+  background-image:
+    linear-gradient(rgba(24,24,27,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(24,24,27,0.035) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+@media (min-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+input, textarea, select {
+  color: #18181b;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #71717a;
+}
