@@ -14,11 +14,11 @@ export default function ContactPage() {
           <div className="mt-8 space-y-5 text-zinc-700">
             <div>
               <div className="text-zinc-500">Phone</div>
-              <div className="mt-1 text-lg font-semibold text-zinc-950">(606) 000-0000</div>
+              <div className="mt-1 text-lg font-semibold text-zinc-950">(606) 407-2381</div>
             </div>
             <div>
               <div className="text-zinc-500">Email</div>
-              <div className="mt-1 text-lg font-semibold text-zinc-950">info@livewireprinting.com</div>
+              <div className="mt-1 text-lg font-semibold text-zinc-950">team@livewireprints.com</div>
             </div>
             <div>
               <div className="text-zinc-500">Hours</div>
@@ -26,7 +26,7 @@ export default function ContactPage() {
             </div>
             <div>
               <div className="text-zinc-500">Location</div>
-              <div className="mt-1 text-lg font-semibold text-zinc-950">Maysville, Kentucky</div>
+              <div className="mt-1 text-lg font-semibold text-zinc-950">7301 Mt. Gilead Rd , Maysville, KY, United States, 41056</div>
             </div>
           </div>
         </div>

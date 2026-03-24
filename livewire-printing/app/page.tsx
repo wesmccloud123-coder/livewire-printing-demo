@@ -15,7 +15,7 @@ export default function HomePage() {
               Built to help a word-of-mouth business look ready for the next level
             </div>
             <h1 className="max-w-2xl text-5xl font-black leading-tight tracking-tight text-zinc-950 sm:text-6xl">
-              Custom Printing, Wraps & Signs That Make Your Brand Look Legit
+              Custom Printing, Wraps & Signs for Local Businesses That Want to Stand Out
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-8 text-zinc-600">
               Screen printing, vehicle graphics, decals, signage, and branded apparel for businesses, teams, events, and organizations.
