@@ -1,11 +1,29 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { navLinks } from "@/lib/site-data";
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  // 👇 CLOSE MENU WHEN CLICKING OUTSIDE
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    }
+
+    if (open) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [open]);
 
   return (
     <header className="sticky top-0 z-50 border-b border-black/5 bg-white/80 backdrop-blur-xl">
@@ -31,7 +49,7 @@ export function Header() {
         {/* Mobile Button */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-zinc-900"
+          className="md:hidden text-zinc-900 text-2xl"
         >
           ☰
         </button>
@@ -47,7 +65,10 @@ export function Header() {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden border-t border-black/5 bg-white px-6 py-4 space-y-4">
+        <div
+          ref={menuRef}
+          className="md:hidden border-t border-black/5 bg-white px-6 py-4 space-y-4 shadow-lg"
+        >
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -62,6 +83,7 @@ export function Header() {
           <Link
             href="/contact"
             className="block w-full text-center rounded-full bg-red-600 px-6 py-3 text-white font-semibold"
+            onClick={() => setOpen(false)}
           >
             Request a Quote
           </Link>
